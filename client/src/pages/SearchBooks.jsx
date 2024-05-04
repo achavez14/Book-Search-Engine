@@ -8,8 +8,11 @@ import {
   Row
 } from 'react-bootstrap';
 
+import { useMutation } from '@apollo/client';
+
+import { SAVE_BOOK } from '../utils/mutations'; // Import the SAVE_BOOK mutation
+
 import Auth from '../utils/auth';
-import { saveBook, searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
 const SearchBooks = () => {
@@ -25,7 +28,9 @@ const SearchBooks = () => {
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
-  });
+  }, []);
+
+  const [saveBook] = useMutation(SAVE_BOOK); // Initialize the SAVE_BOOK mutation
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {

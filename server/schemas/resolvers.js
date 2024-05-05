@@ -3,11 +3,11 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    searchBooks: async (parent, { searchTerm }, context) => {
+    searchBooks: async (parent, { query }, context) => {
       if (context.user) {
         // Implement logic to search for books using Google Books API or any other source
-        const searchBooks = await User.findById(context.user._id);
-        return searchBooks;
+        const searchResults = await performBookSearch(query); // Implement this function
+        return searchResults;
       } else {
         throw new AuthenticationError('You need to be logged in to search for books.');
       }

@@ -33,6 +33,7 @@ const typeDefs = `
     saveBook(input: BookInput!): User
     removeBook(bookId: String!): User
     signup(username: String!, email: String!, password: String!): Auth
+    logout: Auth
   }
 
   input BookInput {

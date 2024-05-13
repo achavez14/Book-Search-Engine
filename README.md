@@ -7,9 +7,6 @@ The Book Search Engine is a full stack web application that allows users to sear
 
 - ![Screenshot_1](./client/src/assets/images/Screenshot_(1).png)
 - ![Screenshot_2](./client/src/assets/images/Screenshot_(2).png)
-- ![Screenshot_3](./client/src/assets/images/Screenshot_(3).png)
-- ![Screenshot_4](./client/src/assets/images/Screenshot_(4).png)
-- ![Screenshot_5](./client/src/assets/images/Screenshot_(5).png)
 
 ## Link to Deployed Application
 https://book-search-engine-5o39.onrender.com
